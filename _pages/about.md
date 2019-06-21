@@ -1,23 +1,24 @@
 ---
 layout: about
 permalink: /
-title: <strong>Your</strong> Name
-description: <a href="">Affiliations</a>. Address. Contacts. Moto. Etc.
+title: <strong>Chan</strong> Park
+description: PhD student@CMU studying NLP
 
 profile:
   align: right
   image: prof_pic.jpg
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  address:
+    # <p>555 your office number</p>
+    # <p>123 your address street</p>
+    # <p>Your City, State 12345</p>
 
 news: true
-social: true
+social: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I’m a second year PhD Student advised by [Yulia Tsvetkov](https://www.cs.cmu.edu/~ytsvetko/) at [Language Technologies Institute](https://www.lti.cs.cmu.edu) of Carnegie Mellon University .  
+My research interests are in the area of natural language processing and artificial intelligence.
+More specifically, I'm interested in a broad range of natural language generation problems such as data-to-text and machine translation.
+I am a recipient of [KFAS Fellowship](http://kfas.or.kr/?pCulture=en), and was a research intern at [Adobe Research](https://research.adobe.com). 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Email: *{first_name}{last_name}* at cmu.edu
