@@ -13,7 +13,13 @@
   {% if entry.type == "thesis" %}
     {{reference}}
   {% else %}
-    <span class="title">{{entry.title}}</span>
+    <span class="title">
+      {% if entry.pdf %}
+        <a href="{{ entry.pdf | prepend: '/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">{{entry.title}}</a>
+      {% else %}
+        {{entry.title}}
+      {% endif %}
+    </span>
     <span class="author">
       {% for author in entry.author_array %}
         {% if forloop.length == 1 %}
@@ -35,57 +41,54 @@
             {% endif %}
           {% else %}
             {% if author.last == site.scholar.last_name %}
-              and <em>{{author.last}}, {{author.first}}</em>
+              and <em>{{author.last}}, {{author.first}}</em>.&emsp;
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a> 
+                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>.&emsp;
               {% else %}
-                and {{author.last}}, {{author.first}}
+                and {{author.last}}, {{author.first}}.&emsp;
               {% endif %}
             {% endif %}
           {% endunless %}
         {% endif %}
       {% endfor %}
-    </span>
+      
+    {% comment %} </span>
 
-    <span class="periodical">
+    <span class="periodical"> {% endcomment %}
     {% if entry.type == "article" %}
-      <em>{{entry.journal}}</em>
+      <em>{{entry.journal}}</em>&emsp;
     {% elsif entry.type == "inproceedings" %}
-      <em>In {{entry.booktitle}}</em>
+      <i>{{entry.booktitle}}</i>&emsp;
     {% endif %}
     {% if entry.year %}
-      {{entry.year}}
+      {% comment %} {{entry.year}} &emsp; {% endcomment %}
     {% endif %}
+    {% comment %} <span class="links"> {% endcomment %}
+    {% if entry.abstract %}
+      [<a class="abstract">Abs</a>]
+    {% endif %}
+    {% if entry.arxiv %}
+      [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
+    {% endif %}
+    {% if entry.html %}
+      [<a href="{{ entry.html }}" target="_blank">HTML</a>]
+    {% endif %}
+    {% if entry.supp %}
+      [<a href="{{ entry.supp | prepend: '/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Supp</a>]
+    {% endif %}
+    {% if entry.slides %}
+      [<a href="{{ entry.slides | prepend: '/slides/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
+    {% endif %}
+    {% if entry.code %}
+      [<a href="{{ entry.code }}" target="_blank">Code</a>]
+    {% endif %}
+    {% if entry.poster %}
+      [<a href="{{ entry.poster | prepend: '/posters/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Poster</a>]
+    {% endif %}
+    {% comment %} </span> {% endcomment %}
     </span>
   {% endif %}
-
-  <span class="links">
-  {% if entry.abstract %}
-    [<a class="abstract">Abs</a>]
-  {% endif %}
-  {% if entry.arxiv %}
-    [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
-  {% endif %}
-  {% if entry.html %}
-    [<a href="{{ entry.html }}" target="_blank">HTML</a>]
-  {% endif %}
-  {% if entry.pdf %}
-    [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
-  {% endif %}
-  {% if entry.supp %}
-    [<a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Supp</a>]
-  {% endif %}
-  {% if entry.poster %}
-    [<a href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Poster</a>]
-  {% endif %}
-  {% if entry.slides %}
-    [<a href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
-  {% endif %}
-  {% if entry.code %}
-    [<a href="{{ entry.code }}" target="_blank">Code</a>]
-  {% endif %}
-  </span>
 
   <!-- Hidden abstract block -->
   {% if entry.abstract %}
