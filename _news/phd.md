@@ -3,6 +3,7 @@ layout: post
 title: Started my PhD degree @CMU
 date: 2018-08-23 09:00:00-0400
 inline: false
+active: true
 ---
 
 From Fall 2018, I have started my PhD degree. Below is my personal thoughts and feelings about the news written in Korean. 
