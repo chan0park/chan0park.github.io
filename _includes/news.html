@@ -6,7 +6,7 @@
     {% for item in news limit: site.news_limit %}
       {% if item.active %}
         <tr>
-          <td class="date">{{ item.date | date: "%b %-d, %Y" }}</td>
+          <td class="date">{{ item.date | date: "%b '%y" }}</td>
           <td class="announcement">
             {% if item.inline %}
               {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
