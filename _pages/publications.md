@@ -2,10 +2,11 @@
 layout: page
 permalink: /publications/
 title: publications
-description: 
-years: [2019,2020]
+description: (* indicates equal contribution)
+years: [2021,2020,2019]
 ---
 
 {% for y in page.years %}
+  <h4><b>{{y}}</b></h4>
   {% bibliography -f papers -q @*[year={{y}}]* %}
 {% endfor %}

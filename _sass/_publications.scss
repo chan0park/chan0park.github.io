@@ -27,6 +27,8 @@
 
         span { display: block; }
         .title { font-weight: bolder; }
+        .code { color: $dark-gray; margin-left: 0.5em; }
+        .poster { color: $dark-gray; }
         .author {
             a {
                 border-bottom: 1px dashed $theme-color;

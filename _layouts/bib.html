@@ -1,5 +1,6 @@
 ---
 ---
+{% assign equalcontributor = entry.equalcontributor | to_integer %}
 
 {% if entry.abbr %}
   {% if site.data.venues[entry.abbr] %}
@@ -19,34 +20,52 @@
       {% else %}
         {{entry.title}}
       {% endif %}
+      {% if entry.slides %}
+      [<a href="{{ entry.slides | prepend: '/slides/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
+      {% endif %}
+      {% if entry.code %}
+      <a class="code" href="{{ entry.code }}" target="_blank">[Code]</a>
+      {% endif %}
+      {% if entry.poster %}
+      <a class="poster" href="{{ entry.poster | prepend: '/posters/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">[Poster]</a>
+      {% endif %}
+      {% if entry.supp %}
+      <a href="{{ entry.supp | prepend: '/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">[Supp]</a>
+      {% endif %}
     </span>
     <span class="author">
       {% for author in entry.author_array %}
+        {% assign name = {{author.first}} | append:" " | append: {{author.last}} %}
+        {% if equalcontributor %}
+          {% if forloop.index0 < equalcontributor %}
+          {% assign name = {{author.first}} | append:" " | append: {{author.last}} | append: "*" %}
+          {% endif %}
+        {% endif %}
         {% if forloop.length == 1 %}
           {% if author.last == site.scholar.last_name %}
-            <em>{{author.last}}, {{author.first}}</em>
+            <b>{{ name }}</b>
           {% else %}
-            {{author.last}}, {{author.first}}
+            {{ name }}
           {% endif %}
         {% else %}
           {% unless forloop.last %}
             {% if author.last == site.scholar.last_name %}
-              <em>{{author.last}}, {{author.first}}</em>,
+              <b>{{ name }}</b>,
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>, 
+                <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{ name }}</a>,
               {% else %}
-                {{author.last}}, {{author.first}},
+                {{name}},
               {% endif %}
             {% endif %}
           {% else %}
             {% if author.last == site.scholar.last_name %}
-              and <em>{{author.last}}, {{author.first}}</em>.&emsp;
+              and <b>{{ name }}</b>.&emsp;
             {% else %}
               {% if site.data.coauthors[author.last] %}
-                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>.&emsp;
+                and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{ name }}</a>.&emsp;
               {% else %}
-                and {{author.last}}, {{author.first}}.&emsp;
+                and {{ name }}.&emsp;
               {% endif %}
             {% endif %}
           {% endunless %}
@@ -73,18 +92,6 @@
     {% endif %}
     {% if entry.html %}
       [<a href="{{ entry.html }}" target="_blank">HTML</a>]
-    {% endif %}
-    {% if entry.supp %}
-      [<a href="{{ entry.supp | prepend: '/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Supp</a>]
-    {% endif %}
-    {% if entry.slides %}
-      [<a href="{{ entry.slides | prepend: '/slides/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>]
-    {% endif %}
-    {% if entry.code %}
-      [<a href="{{ entry.code }}" target="_blank">Code</a>]
-    {% endif %}
-    {% if entry.poster %}
-      [<a href="{{ entry.poster | prepend: '/posters/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Poster</a>]
     {% endif %}
     {% comment %} </span> {% endcomment %}
     </span>
