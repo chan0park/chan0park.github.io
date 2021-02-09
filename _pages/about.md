@@ -25,4 +25,4 @@ I am currently a recipient of [KFAS Fellowship](http://kfas.or.kr/?pCulture=en) 
 Before joining CMU, I received my bachelor's and master's degrees from [Yonsei University](https://www.yonsei.ac.kr/en_sc/), South Korea. 
 
 Email: *{first_name}{last_name}* at cmu.edu  
-CV: [here](https://chan0park.github.io/assets/CV_Chan_Park.pdf) (Last updated: Oct'20)
+CV: [here](https://chan0park.github.io/assets/CV_Chan_Park.pdf) (Last updated: Jan '21)
