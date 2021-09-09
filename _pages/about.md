@@ -17,7 +17,7 @@ news: true
 social: false
 ---
 
-I’m a third-year PhD student advised by [Yulia Tsvetkov](https://www.cs.cmu.edu/~ytsvetko/) at [Language Technologies Institute](https://www.lti.cs.cmu.edu) at [Carnegie Mellon University](https://www.cmu.edu). My research interests are in the area of natural language processing and artificial intelligence. 
+I’m a fourth-year PhD student advised by [Yulia Tsvetkov](https://www.cs.cmu.edu/~ytsvetko/) at [Language Technologies Institute](https://www.lti.cs.cmu.edu) at [Carnegie Mellon University](https://www.cmu.edu). My research interests are in the area of natural language processing and artificial intelligence. 
 
 More specifically, I’m interested in understanding people’s emotions and affects manifested in text and how they are different by language and culture. My recent work includes projects related to multilingual affect analysis, multilingual hate speech detection, and cross-lingual transfer. Ultimately, I’d like to use NLP techniques to enable cross-cultural comparative research and to better identify and understand social problems.
 
