@@ -16,7 +16,11 @@
   {% else %}
     <span class="title">
       {% if entry.pdf %}
-        <a href="{{ entry.pdf | prepend: '/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">{{entry.title}}</a>
+        {% if entry.pdf contains 'https://' %}
+          <a href="{{ entry.pdf }}" target="_blank">{{entry.title}}</a>
+        {% else %}
+          <a href="{{ entry.pdf | prepend: '/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">{{entry.title}}</a>
+        {% endif %}
       {% else %}
         {{entry.title}}
       {% endif %}
