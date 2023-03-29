@@ -6,7 +6,7 @@
 }
 .address {
     font-family: monospace;
-
+    text-align: right;
     p { margin: 0; }
 }
 
@@ -24,7 +24,7 @@
         border-collapse: collapse;
         width: 100%;
 
-        .date { width: 15%; }
+        .date { width: 15%; color:black;}
         .announcement { width: 85%; }
 
         tr { text-align: left; }
