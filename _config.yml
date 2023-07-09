@@ -1,119 +1,54 @@
-# -----------------------------------------------------------------------------
-# Site settings
-# -----------------------------------------------------------------------------
-name: Chan Park
-title: Chan Park
-email: chanpark@cmu.edu
-description: > # this means to ignore newlines until "url:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
-  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+# Basic Information 
+title: Chan Young Park
+position: Ph.D. Candidate
+affiliation: Carnegie Mellon University
+pronouns: she/her
+email: chanyoun (at) cs.cmu.edu
 
-url:  # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/
-last_updated: # leave blank if you don't want to display last updated
+# Search Engine Optimization (SEO)
+# The following information is used to improve the website traffic from search engines, e.g., Google.
+keywords: Chan Park, Natural Language Processing, PhD Student, Carnegie Mellon University, University of Washington
+description: personal homepage for Chan Young Park, NLP researcher at CMU.
+canonical: https:/chan0park.github.io/
 
-# -----------------------------------------------------------------------------
-# Social integration
-# -----------------------------------------------------------------------------
-github_username: chan0park # your GitHub user name
-twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
-scholar_userid: # your Google Scholar ID
-orcid_id: # your ORCID ID
-medium_username: # your Medium username
-quora_username: # your Quora username
+# Links 
+# If you don't need one of them, you may delete the corresponding line.
+google_scholar: https://scholar.google.com/citations?user=yjzpOQoAAAAJ&hl=en&oi=ao
+cv_link: assets/files/CV_Chan_Park.pdf
+cv_version: (Last updated) July 2023
+github_link: https://github.com/chan0park
+linkedin: https://www.linkedin.com/in/chan0park/
+twitter: https://twitter.com/chan_young_park
 
-contact_note: 
+# Images (e.g., your profile picture and your website's favicon) 
+# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
+avatar: ./assets/img/profile.jpg
+favicon: ./assets/img/favicon.png
+favicon_dark: ./assets/img/favicon-dark.png
 
-google_analytics: UA-98790392-1 # out your google-analytics code
+# Footnote
+# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
+enable_footnote: false
 
-# -----------------------------------------------------------------------------
-# Blog
-# -----------------------------------------------------------------------------
-blog_name: blog
-blog_description: a simple whitespace theme
+# Auto Dark Mode
+# You may use the option to disable the automatic dark theme
+auto_dark_mode: true
 
-# Pagination
-paginate: 4
-permalink: /blog/:year/:title/
-paginate_path: /blog/page:num/
+# Google Analytics ID
+# Please remove this if you don't use Google Analytics
+google_analytics: UA-98790392-1
 
-text:
-  pagination:
-    newer: 'Newer'
-    older: 'Older'
+# Use this project as a remote theme for GitHub Pages
+# See the guide here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+# remote_theme: yaoyao-liu/minimal-light
 
-# Comments
-disqus_shortname: chan0park # put your disqus shortname
-
-# Optional features
-show_social_icons:  false
-enable_anchorjs:    false
-enable_katex:       true
-
-# -----------------------------------------------------------------------------
-# Collections
-# -----------------------------------------------------------------------------
-collections:
-  news:
-    defaults:
-      layout: post
-    output: true
-    permalink: /news/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
-
-news_limit: 6
-
-# -----------------------------------------------------------------------------
-# Jekyll settings
-# -----------------------------------------------------------------------------
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
-
-# Includes & excludes
-include: ['_pages']
-exclude: [vendor]
-
-# Plug-ins
-plugins:
-    - jekyll-email-protect
-    - jekyll-paginate
-    - jekyll/scholar
-    - jemoji
-
-# Jekyll-Scholar
-scholar:
-
-  last_name: Park
-
-  style: apa
-  locale: en
-
-  sort_by: year
-  order: descending
-
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-
-  replace_strings: true
-  join_strings: true
-
-  details_dir: bibliography
-  details_layout: bibtex.html
-  details_link: Details
-
-  query: "@*"
-
-# -----------------------------------------------------------------------------
-# Other settings
-# -----------------------------------------------------------------------------
-jquery_version: "1.12.4"
-katex_version: "0.9.0"
-anchorjs_version: "3.2.2"
+# The following files will be removed from the generated website.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - README_zh_Hans.md
+  - README_zh_Hant.md
+  - README_de.md
+  - LICENSE
+  - minimal-light.gemspec
