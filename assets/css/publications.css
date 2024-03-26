@@ -61,6 +61,7 @@ blockquote { background: var(--global-bg-color); border-left: 2px solid var(--gl
 .publications ol.bibliography li .links a.btncolor { color: #FFFFFF; background-color: #00008B; border: 1px solid #00008B; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
 
 .publications ol.bibliography li .links a.btnarxiv { color: #FFFFFF; background-color: #d51d1d; border: 1px solid #d51d1d; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
+.publications ol.bibliography li .links a.btnnaacl { color: #FFFFFF; background-color: #008b09; border: 1px solid #008b09; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
 .publications ol.bibliography li .links a.btnemnlp { color: #FFFFFF; background-color: #008b09; border: 1px solid #008b09; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
 .publications ol.bibliography li .links a.btnacl { color: #FFFFFF; background-color: #008b09; border: 1px solid #008b09; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
 .publications ol.bibliography li .links a.btnwww { color: #FFFFFF; background-color: #8b6400; border: 1px solid #8b6400; padding-left: 0.5rem; padding-right: 0.5rem; padding-top: 0.1rem; padding-bottom: 0.1rem; }
